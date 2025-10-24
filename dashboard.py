@@ -158,8 +158,8 @@ else:
 # =====================================================
 @st.cache_resource(show_spinner=False)
 def load_models():
-    yolo_path = "model/Leni Gustia_Laporan 4.pt"
-    cnn_path = "model/Leni_Gustia_Laporan_2.h5"
+    yolo_path = "model/Yolo.pt"
+    cnn_path = "model/CNN.h5"
 
     if not os.path.exists(yolo_path):
         st.error(f"❌ File YOLO tidak ditemukan: {yolo_path}")
