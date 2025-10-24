@@ -1,4 +1,4 @@
-strstreamlit
+streamlit
 ultralytics
 tensorflow
 opencv-python-headless
