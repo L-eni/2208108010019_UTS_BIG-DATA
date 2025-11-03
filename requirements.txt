@@ -1,10 +1,9 @@
 streamlit
 ultralytics
-tensorflow
 opencv-python-headless
+tensorflow
 Pillow
 numpy
 pandas
 matplotlib
 tqdm
-
