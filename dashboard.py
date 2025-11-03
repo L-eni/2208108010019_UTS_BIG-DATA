@@ -1,16 +1,28 @@
 # =====================================================
 # 👟 Gender & Footwear AI Detection Dashboard 
 # =====================================================
+
+import os
+os.environ["OMP_NUM_THREADS"] = "1"  # mencegah error thread di cloud
+
 import streamlit as st
+
+# Pastikan OpenCV terinstal
+try:
+    import cv2
+except ImportError:
+    import subprocess
+    subprocess.run(["pip", "install", "opencv-python-headless"])
+    import cv2
+
 from ultralytics import YOLO
 import tensorflow as tf
 from tensorflow.keras.preprocessing import image
 import numpy as np
-from PIL import Image
-import time
-import os
+from PIL import Image, ImageEnhance, ImageOps, ImageFilter
 import pandas as pd
-from PIL import ImageEnhance, ImageOps, ImageFilter
+import time
+
 
 # =====================================================
 # KONFIGURASI HALAMAN
